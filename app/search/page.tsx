@@ -18,7 +18,7 @@ interface Property {
   area?: number
 }
 
-export default function SearchPage() {
+function SearchContent() {
   const searchParams = useSearchParams()
   const searchType = searchParams.get('type') === 'full' ? 'full' : 'case'
 
@@ -195,5 +195,14 @@ export default function SearchPage() {
         )}
       </div>
     </div>
+  )
+}
+
+
+export default function SearchPage() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <SearchContent />
+    </Suspense>
   )
 }
