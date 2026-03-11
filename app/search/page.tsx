@@ -1,11 +1,10 @@
-﻿'use client'
+'use client'
 import { Suspense } from 'react'
 import { useSearchParams } from 'next/navigation'
 
 function SearchContent() {
   const searchParams = useSearchParams()
-  const searchType = searchParams.get('type') === 'full' ? 'full' : 'case'
-  return <div>검색중...</div>
+  return <div>검색 페이지</div>
 }
 
 export default function SearchPage() {
