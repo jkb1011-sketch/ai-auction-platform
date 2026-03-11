@@ -7,6 +7,15 @@ function SearchContent() {
   return <div>검색 페이지</div>
 }
 
+function SearchContent() {
+  return (
+    <Suspense fallback={<div>로딩 중...</div>}>
+      <SearchContent />
+    </Suspense>
+  )
+}
+
+
 export default function SearchPage() {
   return (
     <Suspense fallback={<div>로딩 중...</div>}>
